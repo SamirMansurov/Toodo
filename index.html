@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./index.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+	<title>Trello</title>
+	
+</head>
+
+<body>
+	<div class="task-form-container">
+			<button class="exit">x</button>
+			<h2>Create a New Task</h2>
+			<form name="task-form" id="task-form">
+				<div class="form-group">
+					<label for="task-description">Task Description</label>
+					<textarea id="task-description" name="description" placeholder="Enter a description"
+						required></textarea>
+				</div>
+
+				<div class="form-group">
+					<label for="task-labels">Task Labels</label>
+					<select name="status">
+						<option value="1">Todo</option>
+						<option value="2">In progress</option>
+						<option value="3">Done</option>
+					</select>
+				</div>
+
+				<button type="submit">Create Task</button>
+			</form>
+	</div>
+	<div class="col-form-container">
+			<button id="col_exit" class="exit">x</button>
+			<h2>Create a New Column</h2>
+			<form name="col-form" id="col-form">
+				<div class="form-group">
+					<label for="title">Task Title</label>
+					<input type="text" id="title" name="title" placeholder="Название колонки" required>
+				</div>
+
+				<button type="submit">Create Column</button>
+			</form>
+	</div>
+
+
+	<div class="container">
+		<header class="header">
+			<nav class="left">
+				<a href="#"><img src="/nineballs.svg" alt=""></a>
+				<a href="/"><img src="/logo.svg" alt=""></a>
+				<a href="#">Рабочие пространства <img src="/down.svg" alt=""></a>
+				<a href="#">Недавние <img src="/down.svg" alt=""></a>
+				<a href="#">В избранном <img src="/down.svg" alt=""></a>
+				<a href="#">Шаблоны <img src="/down.svg" alt=""></a>
+				<button class="create_new">Создать</button>
+			</nav>
+			<nav class="right">
+				<input type="text" placeholder="Поиск" class="search" name="search">
+				<a href="#"><img src="/bell.svg" alt=""></a>
+				<a href="#"><img src="/support.svg" alt=""></a>
+				<a href="#" class="profil"></a>
+			</nav>
+		</header>
+		<div class="bottom_space">
+			<div class="editor">
+				<div class="add">
+					<img src="/adds.svg" alt="">
+					<p>PRODIGY: рабочее пространства <br> бесплатно</p>
+					<img src="/left.svg" alt="">
+				</div>
+				<div class="config">
+					<div class="elem">
+						<img src="/trello.svg" alt="">
+						<p>Доски</p>
+						
+					</div>
+					<div class="elem">
+						<img src="/user.svg" alt="">
+						<p>Участники</p>
+						<p>+</p>
+					</div>
+					<div class="elem">
+						<img src="/setting_roll.svg" alt="">
+						<p>Настройки рабочего <br> пространства</p>
+						<img src="/down.svg" alt="">
+					</div>
+				</div>
+				<p class="mode">Режимы просмотра рабочего прос...</p>
+				<div class="config">
+					<div class="elem">
+						<img src="/tabs.svg" alt="">
+						<p>Таблица</p>
+						
+					</div>
+					<div class="elem">
+						<img src="/calendary.svg" alt="">
+						<p>Календарь</p>
+					</div>
+				</div>
+				<div class="board">
+					<p>Мои доски</p>
+					<p class="add_board">+</p>
+				</div>
+				<div class="my_board">
+					<div class="item">
+						<div class="board"></div>
+						<p class="name_board">desk</p>
+					</div>
+				</div>
+				<div class="premium">
+					<p>Попробовать Premium <br> бесплатно</p>
+				</div>
+			</div>
+			<div class="main">
+				<header class="header_main_space">
+					<nav class="left">
+						<a href="#" class="desk_name">desk</a>
+						<a href="#"><img src="/star.svg" alt=""></a>
+						<a href="#"><img src="/friends.svg" alt=""></a>
+						<button class="desk_btn"><img src="/filter_desk.svg" alt=""> По доске</button>
+						<a href="#"><img src="/down.svg" alt=""></a>
+					</nav>
+					<nav class="right">
+						<a href="#"><img src="/rocket.svg" alt=""></a>
+						<a href="#"><img src="/lighter.svg" alt=""></a>
+						<a href="#"><img src="/filter.svg" alt=""> Фильтры  |</a>
+						<div class="profil"></div>
+						<button class="send"><img src="/person.svg" alt=""> Поделиться</button>
+						<a href="#"><img src="/settings.svg" alt=""></a>
+					</nav>
+				</header>
+				<div class="main_place">
+					<div class="cols_place"></div>
+					<div id="new_col">
+						<button class="col_btn">+ Добавить ещё одну калону</button>
+					</div>
+				</div>
+				<div class="trash_cont">
+					<div class="trash">
+						<video class="video_trash" src="/trash_anim.mp4" alt="">
+						<audio class="audio_trash" src="/trash.mp3"></audio>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<audio class="success" src="/success.mp3"></audio>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+	<script type="module" src="/main.js"></script>
+</body>
+
+</html>
